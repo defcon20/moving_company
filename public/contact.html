@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/contact.css"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+
+</head>
+<body>
+
+<div id = 'menu'></div>
+
+<div id="contactCont">
+    <div class="row">
+        <div class="callbackCont callback">
+            <h1 class="big"></h1>
+            <h3 class="small"></h3>
+        </div>
+    </div>
+    <div class="contactFormCont">
+        <div class="row">
+            <h1>Create New Account</h1>
+            <h3>Fast and Easy</h3>
+            <div class="formContainer">
+                <form name="contactForm" id="contactForm">
+                    <div class="errors"></div>
+                    <div class="topContent">
+                        <ul class="list-unstyled">
+                            <li><input type="text" name="firstName" maxlength="30" placeholder="Name"/></li>
+                          <!--  <li><input type="text" name="lastName" maxlength="30" placeholder="Last Name"/></li> -->
+                            <li><input type="text" name="email" maxlength="40" placeholder="youremail@domain.com"/></li>
+                            <li><input type="text" name="password" maxlength="30" placeholder="yourpassword"/></li>
+                        </ul>
+                    </div>
+                   <div class="bodyCont">
+                        <ul class="list-unstyled botSubmit">
+                            <!--<li>
+                                <textarea rows="4" cols="50" name="details"
+                                          placeholder="Add anything you want here!"></textarea>
+                            </li>-->
+                            <li>
+                                <input type="submit" value="Create!" name="formSubmit"/>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="info">
+        <div class="row">
+            <h3>Moving Company</h3>
+            <p>We are glad your considering our services!</p>
+    <!--        <p>General Support: support@boxhopp.com</a></p>
+            <p>Technical Support: boxhoppteam@boxhopp.com</a></p>-->
+        </div>
+    </div>
+</div>
+
+<div id = 'footer'></div>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="bower_components/waypoints/lib/jquery.waypoints.js"></script>
+<script src="bower_components/validate/validate.js"></script>
+<script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+<script src="javascripts/load_pricing.js"></script>
+<script src="javascripts/scripts.js"></script>
+<script src="javascripts/contact.js"></script>
+
+</body>
