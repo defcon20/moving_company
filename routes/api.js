@@ -9,7 +9,7 @@ var Location =  require('../schemas/locations');
 var Delivery = require('../schemas/delivery_dates');
 
 //routing point for user login
-//poplate orders
+
 
 //user registration: findOne if user email exists, if exists then send false
 //http://localhost:8888/api/user/david@gmail.com
@@ -51,11 +51,11 @@ router.get('/products/:id', function(req, res) {
 });
 
 //location delivery: get endpoint for list of locations
-//http://localhost:8888/api/order/3
+//http://localhost:8888/api/location/3
 router.get('/location/:id', function(req, res) {
-  Order.findOne({"user_id": req.params.id}, function(err, order){
-    console.log(order);
-    res.send(order);
+  Location.findOne({"user_id": req.params.id}, function(err, location){
+    console.log(location);
+    res.send(location);
   })
 });
 
@@ -68,14 +68,7 @@ router.get('/order/:id', function(req, res) {
   })
 });
 
-//user history: get endpoint for orders list nest query with product
-//http://localhost:8888/api/order/3
-router.get('/order/:id', function(req, res) {
-  Order.findOne({"user_id": req.params.id}, function(err, order){
-    console.log(order);
-    res.send(order);
-  })
-});
+//routing point for system checkout
 
 //admin user inserts
 //admin user deletes
