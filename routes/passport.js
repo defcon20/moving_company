@@ -54,6 +54,12 @@ module.exports = function(passport){
         });
     });
 
+    router.get('/products', isAuthenticated, function(req, res){
+        res.render('products', {
+            username: req.user._doc.username
+        });
+    });
+
     router.get('/checkout', isAuthenticated, function(req, res){
         res.render('checkout', {
             username: req.user._doc.username
@@ -92,6 +98,16 @@ module.exports = function(passport){
     router.get('/products/get', isAuthenticated, function(req, res){
         Product.find({}, function(err, result){
             res.send(result);
+        });
+    });
+
+    router.get('/products/getDataTable', isAuthenticated, function(req, res){
+        Product.find({}, function(err, result){
+            res.send({
+                data: result.map(function (data) {
+                    return [data._doc.product_name, data._doc.price]
+                })
+            });
         });
     });
 
