@@ -35,6 +35,10 @@ module.exports = function(passport){
             username: req.user._doc.username
         });
     });
+    
+    router.get('/checkout_success', isAuthenticated, function(req, res){
+        res.render('checkout_success');
+    });
 
     router.get('/admin', isAuthenticated, function(req, res){
         if(req.user._doc.admin){

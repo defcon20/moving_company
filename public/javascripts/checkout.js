@@ -22,5 +22,7 @@ $('#Purchase').click(function(e) {
         }));
 
         $('.itemList').html('');
+
+        window.location.href = "/checkout_success";
     });
 });
