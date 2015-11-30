@@ -4,11 +4,8 @@
 var mongoose = require('mongoose');
 
 module.exports = mongoose.model('orders', new mongoose.Schema({
-    "user_id": {type: Number, required: true},
-    "orders": [
-        {"order_number": {type: Number, required: true}},
-        {"product_id": {type: Number, required: true}}
-    ]
+    "username": {type: String, required: true},
+    "orderItem": {type: Array, default: [], required: true}
 }), 'orders');
 
 

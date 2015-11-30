@@ -20,13 +20,30 @@ app.set('view engine', 'ejs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(require('node-compass')({mode: 'expanded'}));
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+var passport = require('passport');
+var expressSession = require('express-session');
+
+app.use(expressSession({
+    secret: 'whereismycheeseburger'
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use('/', routes);
 app.use('/api', api);
+
+app.set('views', 'public/');
+app.set('view engine', 'ejs');
+
+require('./passport/init')(passport);
+
+app.use('/', require('./routes/passport')(passport));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
