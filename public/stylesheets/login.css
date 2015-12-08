@@ -89,3 +89,9 @@
   display: block;
   margin-top: 10px;
 }
+
+/* line 81, ../sass/login.scss */
+.errors {
+  text-align: center;
+  font-weight: bold;
+}

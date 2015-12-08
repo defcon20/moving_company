@@ -1,3 +1,9 @@
+
+<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+<link rel="stylesheet" type="text/css" href="stylesheets/login.css"/>
+<link rel="stylesheet" type="text/css" href="stylesheets/signup.css"/>
+
 <div id="errors"></div>
 
 <div class="container">
@@ -18,7 +24,10 @@
     </div>
 </div>
 
+
 <script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="javascripts/load_pricing.js"></script>
+
 <script type="application/javascript">
     $('#signup').submit(function(e){
         console.log('submit');
@@ -26,11 +35,8 @@
         if($('#username').val().length<=8){
             e.preventDefault();
             $('#errors').html('Username has to be longer than 8 characters');
+            $('#errors').addClass('alert alert-danger');
         }
 
-        if($('#password').val().length<=8){
-            e.preventDefault();
-            $('#errors').html('Password has to be longer than 8 characters');
-        }
     });
 </script>

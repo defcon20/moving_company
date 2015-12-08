@@ -1,17 +1,29 @@
-<div id="note">
+<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+<link rel="stylesheet" type="text/css" href="stylesheets/admin.css"/>
+<meta name="viewport" content="width=device-width, user-scalable=no"/>
 
-</div>
-<div id="products">
+<div id = 'menu'></div>
 
-</div>
+<div class = 'container'>
+  <div id="note"></div>
 
-<div id="addProduct">
-  <input type='text' class='product_name' value='' />
-  <input type='text' class='price' value='' />
-  <a href="#" class="addProduct">Add Product</a>
+  <div id="products"></div>
+
+  <div id="errors"></div>
+
+  <div id="addProduct">
+    <form action="#" class="form-group" method="post">
+      <input type='text' class='form-control product_name' placeholder='Enter Product Name' required/>
+      <input type='text' class='form-control price' placeholder='Enter Price' required/>
+      <input type="submit" class="btn btn-primary addProduct" value = 'Add Product'/>
+    </form>
+  </div>
+
 </div>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/jquery-ui/jquery-ui.js"></script>
 <script src="bower_components/waypoints/lib/jquery.waypoints.js"></script>
 <script src="javascripts/admin.js"></script>
+<script src="javascripts/load_pricing.js"></script>

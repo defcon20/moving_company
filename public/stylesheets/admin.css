@@ -1,0 +1,15 @@
+/* line 1, ../sass/admin.scss */
+.container {
+  text-align: center;
+  margin-top: 10%;
+}
+
+/* line 8, ../sass/admin.scss */
+.addProduct {
+  margin-top: 2%;
+}
+
+/* line 12, ../sass/admin.scss */
+#products {
+  padding: 10px;
+}

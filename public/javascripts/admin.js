@@ -37,6 +37,16 @@ $.get('/products/get').done(function(result){
 
     $('.addProduct').click(function(e) {
         e.preventDefault();
+        if($('#addProduct .product_name').val().length < 1){
+            $('#errors').html('Need Product Name');
+            $('#errors').addClass('alert alert-danger');
+            return false;
+        }
+        if($('#addProduct .price').val().length < 1){
+            $('#errors').html('Need price Name');
+            $('#errors').addClass('alert alert-danger');
+            return false;
+        }
         $.post('/products/add', {
             product_name: $(this).siblings('.product_name').val(),
             price: $(this).siblings('.price').val()

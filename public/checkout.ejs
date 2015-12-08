@@ -1,11 +1,195 @@
-<div class="itemList">
+<title>Check Out</title>
+<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+<link rel="stylesheet" type="text/css" href="stylesheets/checkout.css"/>
+<meta name="viewport" content="width=device-width, user-scalable=no"/>
 
+
+<!--<a href="../checkout_success" id="Purchase">Check Out</a>-->
+<div class = 'return_main'>
+    <a href="../index.html" class = "btn btn-primary">Return to home</a>
 </div>
 
-<a href="#" id="Purchase">Buy All</a>
+<div id = 'errors'></div>
 
+<div class="container">
+
+    <div class="row form-group">
+        <div class="col-xs-12">
+            <ul class="nav nav-pills nav-justified thumbnail setup-panel">
+                <li class="active"><a href="#step-1">
+                        <h4 class="list-group-item-heading">Step 1</h4>
+                        <p class="list-group-item-text">Check your plans</p>
+                    </a></li>
+                <li class="disabled"><a href="#step-2">
+                        <h4 class="list-group-item-heading">Step 2</h4>
+                        <p class="list-group-item-text">Locations</p>
+                    </a></li>
+                <li class="disabled"><a href="#step-3">
+                        <h4 class="list-group-item-heading">Step 3</h4>
+                        <p class="list-group-item-text">Payment</p>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row setup-content" id="step-1">
+        <div class="col-xs-12">
+            <div class="col-md-12 well text-center">
+                <h1> STEP 1</h1>
+
+                <div class="itemList"></div>
+
+                <button id="activate-step-2" class="btn btn-primary btn-lg">Confirm</button>
+            </div>
+        </div>
+    </div>
+    <div class="row setup-content" id="step-2">
+        <div class="col-xs-12">
+            <div class="col-md-12 well">
+                <!--<h1> STEP 2</h1>-->
+                    <div class="container">
+                        <div class="row">
+                            <form role="form" class="col-md-9 go-right">
+                                <h2>Pickup Location</h2>
+                                <p></p>
+                                <div class="form-group">
+                                    <input id="address1" name="address1" type="text" class="form-control" required>
+                                    <label for="name">Address</label>
+                                </div>
+                                <div class="form-group">
+                                    <input id="city1" name="city" type="text" class="form-control" required>
+                                    <label for="city1">City</label>
+                                </div>
+
+                                <div class="form-group">
+                                    <input id="zipcode1" name="zipcode1" type="text" class="form-control" required>
+                                    <label for="zipcode1">Zipcode</label>
+                                </div>
+
+                                <h2>Drop Location</h2>
+                                <p></p>
+                                <div class="form-group">
+                                    <input id="address2" name="address2" type="text" class="form-control" required>
+                                    <label for="address2">Address</label>
+                                </div>
+                                <div class="form-group">
+                                    <input id="city2" name="city2" type="text" class="form-control" required>
+                                    <label for="city2">City</label>
+                                </div>
+
+                                <div class="form-group">
+                                    <input id="zipcode2" name="zipcode2" type="text" class="form-control" required>
+                                    <label for="zipcode2">Zipcode</label>
+                                </div>
+
+                                <h2>Time</h2>
+
+                                <div class="form-group">
+                                    <input class="datepicker form-control" name="datepicker" type="Date" required>
+                                    <label for="date">Date</label>
+                                </div>
+
+                                <div class="form-group">
+                                    <input class="timepicker form-control" name="timepicker" type="Time" required>
+                                    <label for="time">Time</label>
+                                </div>
+
+
+
+                            </form>
+                        </div>
+                    </div>
+
+                <button id="activate-step-3" class="btn btn-primary btn-lg">Next</button>
+                <!--<h1 class="text-center"> STEP 2</h1>-->
+            </div>
+        </div>
+    </div>
+    <div class="row setup-content" id="step-3">
+        <div class="col-xs-12">
+            <div class="col-md-12 well">
+                <h1 class="text-center"> STEP 3</h1>
+
+                <div class="container">
+                    <form class="form-horizontal" role="form">
+                        <fieldset>
+                            <legend>Payment</legend>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="card-holder-name">Name on Card</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="card-number">Card Number</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="expiry-month">Expiration Date</label>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+                                                <option>Month</option>
+                                                <option value="01">Jan (01)</option>
+                                                <option value="02">Feb (02)</option>
+                                                <option value="03">Mar (03)</option>
+                                                <option value="04">Apr (04)</option>
+                                                <option value="05">May (05)</option>
+                                                <option value="06">June (06)</option>
+                                                <option value="07">July (07)</option>
+                                                <option value="08">Aug (08)</option>
+                                                <option value="09">Sep (09)</option>
+                                                <option value="10">Oct (10)</option>
+                                                <option value="11">Nov (11)</option>
+                                                <option value="12">Dec (12)</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <select class="form-control" name="expiry-year">
+                                                <option value="13">2013</option>
+                                                <option value="14">2014</option>
+                                                <option value="15">2015</option>
+                                                <option value="16">2016</option>
+                                                <option value="17">2017</option>
+                                                <option value="18">2018</option>
+                                                <option value="19">2019</option>
+                                                <option value="20">2020</option>
+                                                <option value="21">2021</option>
+                                                <option value="22">2022</option>
+                                                <option value="23">2023</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="cvv">Card CVV</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <button type="submit" class="btn btn-success" id="Purchase">Pay Now</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/jquery-ui/jquery-ui.js"></script>
 <script src="bower_components/waypoints/lib/jquery.waypoints.js"></script>
 <script src="javascripts/checkout.js"></script>
+<!--<script src="bower_components/pickadate/lib/picker.date.js"></script>-->
+<!--<script src="bower_components/pickadate/lib/picker.time.js"></script>-->

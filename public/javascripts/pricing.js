@@ -15,7 +15,7 @@ $.ajax({
             "<h4></h4>"+
             "<p class='price'>"+"$"+result[i].price+"</p>"+
             "<h5>$100.00 an hour</h5>"+
-            "<a href='#' class='addplan' data-item='"+result[i].product_name+"' data-price='"+result[i].price+"'>Place Order</a>"
+            "<a href='#' class='btn btn-primary addplan' data-item='"+result[i].product_name+"' data-price='"+result[i].price+"'>Place Order</a>"
         );
     }
 
@@ -27,7 +27,7 @@ $.ajax({
             price: $(this).data('price')
         });
         localStorage.setItem('cart', JSON.stringify(cart));
-        $('body').prepend("<b>Item Added successfully for "+$(this).data('item')+"</b>");
+        $('#priceList').append("<div class = 'add_cart alert alert-success'>Item Added successfully for "+$(this).data('item')+"</div>");
 
     });
 });

@@ -12,7 +12,8 @@
                 <li><a href="../pricing">Pricing</a></li>
                 <li><a href="../about.html">About</a></li>
                 <li><a href="../checkout">Cart</a> </li>
-                <!--<li><a href="../contact.html">Contact</a></li>-->
+                <li><a href="../orderhistory">My Orders</a> </li>
+                <li><a href="../admin" id="adminlink" style="display: none;">Admin</a> </li>
                 <li class="mobileOnly mobOnly"><a href="login">Login</a></li>
             </ul>
         </div>
@@ -21,3 +22,13 @@
         </div>
     </div>
 </div>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+
+<script type="application/javascript">
+    $.get('/isadmin').done(function(data){
+        if(data.admin){
+            $('#adminlink').show();
+        }
+    });
+</script>

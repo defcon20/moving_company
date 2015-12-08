@@ -277,3 +277,9 @@
 #contactCont .row .formContainer .topContent ul.botSubmit li, #contactCont .row .formContainer .bodyCont ul.botSubmit li, #contactCont .row .formContainer .customAdd ul.botSubmit li {
   height: 140px;
 }
+
+/* line 260, ../sass/signup.scss */
+#errors {
+  text-align: center;
+  font-weight: bold;
+}

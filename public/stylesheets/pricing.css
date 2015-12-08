@@ -262,3 +262,9 @@
 #priceList .plans ul .greenTop {
   border-top: 5px solid #40611f;
 }
+
+/* line 228, ../sass/pricing.scss */
+.add_cart {
+  text-align: center;
+  font-weight: bold;
+}

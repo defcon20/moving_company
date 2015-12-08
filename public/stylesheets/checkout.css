@@ -1,4 +1,130 @@
-/* line 1, ../sass/checkout.scss */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+/* line 3, ../sass/checkout.scss */
 body {
   margin-top: 20px;
+}
+
+/* line 7, ../sass/checkout.scss */
+.continue_shopping {
+  margin-left: 30%;
+}
+
+/* line 11, ../sass/checkout.scss */
+.form-control {
+  background: white;
+}
+
+/* line 14, ../sass/checkout.scss */
+form {
+  width: 320px;
+  margin: 20px;
+}
+
+/* line 18, ../sass/checkout.scss */
+form > div {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 22, ../sass/checkout.scss */
+form input, form textarea {
+  width: 100%;
+  border: 2px solid gray;
+  background: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 8px 12px;
+  outline: 0;
+}
+
+/* line 33, ../sass/checkout.scss */
+form input:valid, form textarea:valid {
+  background: white;
+}
+
+/* line 36, ../sass/checkout.scss */
+form input:focus, form textarea:focus {
+  border-color: #357EBD;
+}
+
+/* line 39, ../sass/checkout.scss */
+form input:focus + label, form textarea:focus + label {
+  background: #357EBD;
+  color: white;
+  font-size: 70%;
+  padding: 1px 6px;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+/* line 47, ../sass/checkout.scss */
+form label {
+  -webkit-transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+  transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+  position: absolute;
+  color: #999;
+  padding: 7px 6px;
+  font-weight: normal;
+}
+
+/* line 55, ../sass/checkout.scss */
+form textarea {
+  display: block;
+  resize: vertical;
+}
+
+/* line 59, ../sass/checkout.scss */
+form.go-bottom input, form.go-bottom textarea {
+  padding: 12px 12px 12px 12px;
+}
+
+/* line 62, ../sass/checkout.scss */
+form.go-bottom label {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 68, ../sass/checkout.scss */
+form.go-bottom input:focus, form.go-bottom textarea:focus {
+  padding: 4px 6px 20px 6px;
+}
+
+/* line 71, ../sass/checkout.scss */
+form.go-bottom input:focus + label, form.go-bottom textarea:focus + label {
+  top: 100%;
+  margin-top: -16px;
+}
+
+/* line 75, ../sass/checkout.scss */
+form.go-right label {
+  border-radius: 0 5px 5px 0;
+  height: 100%;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  margin-right: -100%;
+}
+
+/* line 83, ../sass/checkout.scss */
+form.go-right input:focus + label, form.go-right textarea:focus + label {
+  right: 0;
+  margin-right: 0;
+  width: 40%;
+  padding-top: 5px;
+}
+
+/* line 90, ../sass/checkout.scss */
+.return_main {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+/* line 95, ../sass/checkout.scss */
+#errors {
+  text-align: center;
+  font-weight: bold;
 }

@@ -1,6 +1,7 @@
+
 db.product.insert(
     [
-        { "product_name": "Package One", "price": 100},
+        {"product_name": "Package One", "price": 100},
         {"product_name": "Package Two", "price": 200},
         {"product_name": "Package Three", "price": 300},
         {"product_name": "Package Four", "price": 400}
@@ -86,24 +87,24 @@ db.location.insert(
 );
 
 db.delivery_date.insert (
-     [
-            {
-                "date": 1448864642
-            },
-            {
-                "date": 1446099842
-            },
-            {
-                "date": 1446272642
-            },
-            {
-                "date": 1447136642
-            },
-            {
-                "date": 1446791042
-            },
-            {
-                "date": 1447136642
-            }
-     ]
+    [
+        {
+            "date": 1448864642
+        },
+        {
+            "date": 1446099842
+        },
+        {
+            "date": 1446272642
+        },
+        {
+            "date": 1447136642
+        },
+        {
+            "date": 1446791042
+        },
+        {
+            "date": 1447136642
+        }
+    ]
 );

@@ -13,14 +13,17 @@ var url = require('url');
 var isAuthenticated = function (req, res, next) {
     if (req.isAuthenticated())
         return next();
-    res.redirect('/');
+
+    res.send({
+        admin: false
+    })
 };
 
 
 module.exports = function(passport){
     router.post('/request/login', passport.authenticate('local', {
         successRedirect: '/home',
-        failureRedirect: '/login.html',
+        failureRedirect: '/login.html?failed=true',
         failureFlash : true
     }));
 
@@ -40,6 +43,8 @@ module.exports = function(passport){
         res.render('checkout_success');
     });
 
+
+    //?
     router.get('/admin', isAuthenticated, function(req, res){
         if(req.user._doc.admin){
             res.render('admin', {
@@ -97,6 +102,12 @@ module.exports = function(passport){
             })
         });
 
+    });
+
+    router.get('/isadmin', isAuthenticated, function(req, res){
+        res.send({
+            admin: req.user._doc.admin
+        })
     });
 
     router.get('/products/get', isAuthenticated, function(req, res){

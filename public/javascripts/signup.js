@@ -160,3 +160,4 @@ validator.registerCallback('valid_phone', function (value) {
         $(this).removeClass('active');
     });
 })();
+
